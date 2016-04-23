@@ -168,6 +168,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
  */
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let idx = self.tableView.indexPathForSelectedRow
+        let itemViewController = segue.destinationViewController as! ItemViewController
+        let item = self.products[idx!.row]
+        itemViewController.product = item
+    }
+        
     func imagePickerControllerDidCancel(_picker: UIImagePickerController) {
         imagePicker.dismissViewControllerAnimated(true, completion:  nil)
     }
