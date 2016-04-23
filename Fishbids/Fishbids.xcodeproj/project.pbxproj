@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B549E8D31CCBBE5E002344F9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B549E8D11CCBBE5E002344F9 /* Bolts.framework */; };
 		B549E8D41CCBBE5E002344F9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B549E8D21CCBBE5E002344F9 /* Parse.framework */; };
+		B549E8D71CCBC1E3002344F9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B549E8D61CCBC1E3002344F9 /* SystemConfiguration.framework */; };
 		B5AE8C0E1CCB3EA60035B161 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE8C0D1CCB3EA60035B161 /* AppDelegate.swift */; };
 		B5AE8C101CCB3EA60035B161 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE8C0F1CCB3EA60035B161 /* MainViewController.swift */; };
 		B5AE8C131CCB3EA60035B161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AE8C111CCB3EA60035B161 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		B549E8D11CCBBE5E002344F9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B549E8D21CCBBE5E002344F9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B549E8D61CCBC1E3002344F9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B5AE8C0A1CCB3EA60035B161 /* Fishbids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fishbids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AE8C0D1CCB3EA60035B161 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5AE8C0F1CCB3EA60035B161 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B549E8D71CCBC1E3002344F9 /* SystemConfiguration.framework in Frameworks */,
 				B5B071B11CCBBBBE00609F4E /* libsqlite3.tbd in Frameworks */,
 				B5B071AF1CCBBBB600609F4E /* libz.tbd in Frameworks */,
 				B5B071AD1CCBBBAF00609F4E /* StoreKit.framework in Frameworks */,
@@ -110,6 +113,7 @@
 		B549E8D51CCBBE67002344F9 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				B549E8D61CCBC1E3002344F9 /* SystemConfiguration.framework */,
 				B549E8D11CCBBE5E002344F9 /* Bolts.framework */,
 				B549E8D21CCBBE5E002344F9 /* Parse.framework */,
 				B5B071B01CCBBBBE00609F4E /* libsqlite3.tbd */,

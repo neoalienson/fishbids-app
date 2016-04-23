@@ -6,6 +6,8 @@
 //  Copyright © 2016 fishbids. All rights reserved.
 //
 
+import Bolts
+import Parse
 import UIKit
 
 @UIApplicationMain
@@ -15,7 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "zNhS2riGMfJQrJUbhkobwb1cil518yNZSOFLn6m0"
+            $0.clientKey = "2H7gXoFk04yR35VWo25VOHvJKJzjXT6A2tdrZCEb"
+            $0.server = "https://api.parse.com/"
+        }
+        Parse.initializeWithConfiguration(configuration)
+        
         return true
     }
 

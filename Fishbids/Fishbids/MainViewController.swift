@@ -25,11 +25,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var products = [Product]()
     
     override func viewDidLoad() {
+        /*
         products.append(Product(name : "5x 50cm Grouper", price : "$130 HKD", date : "April 23, 2016", sold : false))
         products.append(Product(name : "5x 50cm 10kg Salmon", price : "$155 HKD", date : "April 23, 2016", sold : false))
         products.append(Product(name : "1x 5kg Lobster", price : "$155 HKD", date : "April 23, 2016", sold : false))
         products.append(Product(name : "12kg Shrimp", price : "$50 HKD", date : "April 22, 2016", sold : false))
         products.append(Product(name : "2 20cm Squid", price : "$60 HKD", date : "April 22, 2016", sold : false))
+ */
         
         super.viewDidLoad()
         
