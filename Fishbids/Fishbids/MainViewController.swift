@@ -8,10 +8,11 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet var imageViewPhoto : UIImageView!
     @IBOutlet var buttonSell : UIButton!
+    let imagePicker = UIImagePickerController()
 
     struct Product {
         var name: String
@@ -70,13 +71,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     @IBAction func buttonStart(sender: AnyObject) {
-/*
-        imagePicker =  UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .Camera
         
         presentViewController(imagePicker, animated: true, completion: nil)
-*/
     }
     
     func showProductView() {
@@ -88,6 +86,33 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         presentViewController(viewController, animated: true, completion: nil)
  */
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+        
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        
+        // load and resized image
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        let resizeRate:CGFloat = 5.0
+        
+        let newSize = CGSizeMake(image.size.width / resizeRate, image.size.height / resizeRate)
+        
+        image.resize(newSize, completionHandler: { [weak self](resizedImage, data) -> () in
+            let image = resizedImage
+            self?.imageTemp = image
+            // move to another view after resize
+            self?.showProductView()
+            })
+    }
+    
+    func imagePickerControllerDidCancel(_picker: UIImagePickerController) {
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func refresh() {
+        self.tableViewProducts.reloadData()
     }
 }
 
