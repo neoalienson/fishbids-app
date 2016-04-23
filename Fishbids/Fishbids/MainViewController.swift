@@ -10,8 +10,9 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
-    @IBOutlet var imageViewPhoto : UIImageView!
-    @IBOutlet var buttonSell : UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageViewPhoto : UIImageView!
+    @IBOutlet weak var buttonSell : UIButton!
     let imagePicker = UIImagePickerController()
 
     struct Product {
@@ -99,12 +100,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let newSize = CGSizeMake(image.size.width / resizeRate, image.size.height / resizeRate)
         
+        /*
         image.resize(newSize, completionHandler: { [weak self](resizedImage, data) -> () in
             let image = resizedImage
             self?.imageTemp = image
             // move to another view after resize
             self?.showProductView()
             })
+ */
     }
     
     func imagePickerControllerDidCancel(_picker: UIImagePickerController) {

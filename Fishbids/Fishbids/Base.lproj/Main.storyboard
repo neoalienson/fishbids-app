@@ -99,6 +99,7 @@
                     <connections>
                         <outlet property="buttonSell" destination="2FG-TR-Ilv" id="bxd-GK-rAJ"/>
                         <outlet property="imageViewPhoto" destination="lml-Iz-OuS" id="u2k-Nn-BSB"/>
+                        <outlet property="tableView" destination="U8a-LI-RLf" id="LEN-R1-og3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
