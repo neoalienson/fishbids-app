@@ -115,7 +115,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func refresh() {
-        self.tableViewProducts.reloadData()
+        self.tableView.reloadData()
     }
 }
 
