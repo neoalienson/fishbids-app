@@ -10,6 +10,12 @@ import UIKit
 
 class ItemViewController: UIViewController {
 
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var captured: UILabel!
+    @IBOutlet weak var capture_date: UILabel!
+    @IBOutlet weak var markets: UITextView!
+    
     var product : MainViewController.Product!
     
     @IBAction func close(sender: AnyObject) {
@@ -18,7 +24,12 @@ class ItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let p = product!
+        name.text = p.name
+        price.text = p.price
+        captured.text = p.captured
+        capture_date.text = "Captured on " + p.capture_date
+        markets.text = p.markets
     }
 
 
