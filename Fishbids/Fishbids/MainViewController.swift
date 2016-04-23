@@ -43,6 +43,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func fetchStock() {
         let query = PFQuery.init(className: "item")
+        query.orderByDescending("date")
         query.findObjectsInBackgroundWithBlock {
             (result: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
