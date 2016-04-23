@@ -23,6 +23,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         var price: String
         var date: String
         var sold: Bool
+        var captured : String
+        var markets: String
+        var capture_date: String
     }
    
     var products = [Product]()
@@ -49,7 +52,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             (result: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 for item in result! {
-                    self.products.append(Product(oid: item.objectId!, name: item["name"] as! String, price: item["price"] as! String, date: item["price"] as! String, sold: false))
+                    self.products.append(Product(oid: item.objectId!, name: item["name"] as! String, price: item["price"] as! String, date: item["price"] as! String, sold: false, captured: item["captured"] as! String, markets: item["markets"] as! String, capture_date: item["capture_date"] as! String))
                 }
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.refresh()
