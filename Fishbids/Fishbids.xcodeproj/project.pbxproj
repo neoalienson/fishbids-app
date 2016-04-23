@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B50205D11CCBF7710029CAE0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50205CF1CCBF7710029CAE0 /* CameraViewController.swift */; };
+		B50205D21CCBF7710029CAE0 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B50205D01CCBF7710029CAE0 /* CameraViewController.xib */; };
+		B50205D41CCBF7960029CAE0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50205D31CCBF7960029CAE0 /* CameraView.swift */; };
 		B549E8D31CCBBE5E002344F9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B549E8D11CCBBE5E002344F9 /* Bolts.framework */; };
 		B549E8D41CCBBE5E002344F9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B549E8D21CCBBE5E002344F9 /* Parse.framework */; };
 		B549E8D71CCBC1E3002344F9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B549E8D61CCBC1E3002344F9 /* SystemConfiguration.framework */; };
@@ -46,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B50205CF1CCBF7710029CAE0 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		B50205D01CCBF7710029CAE0 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		B50205D31CCBF7960029CAE0 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		B549E8D11CCBBE5E002344F9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B549E8D21CCBBE5E002344F9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B549E8D61CCBC1E3002344F9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -156,6 +162,9 @@
 				B5AE8C0D1CCB3EA60035B161 /* AppDelegate.swift */,
 				B5AE8C0F1CCB3EA60035B161 /* MainViewController.swift */,
 				B5AE8C111CCB3EA60035B161 /* Main.storyboard */,
+				B50205CF1CCBF7710029CAE0 /* CameraViewController.swift */,
+				B50205D01CCBF7710029CAE0 /* CameraViewController.xib */,
+				B50205D31CCBF7960029CAE0 /* CameraView.swift */,
 				B5AE8C141CCB3EA60035B161 /* Assets.xcassets */,
 				B5AE8C161CCB3EA60035B161 /* LaunchScreen.storyboard */,
 				B5AE8C191CCB3EA60035B161 /* Info.plist */,
@@ -286,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5AE8C181CCB3EA60035B161 /* LaunchScreen.storyboard in Resources */,
+				B50205D21CCBF7710029CAE0 /* CameraViewController.xib in Resources */,
 				B5AE8C151CCB3EA60035B161 /* Assets.xcassets in Resources */,
 				B5AE8C131CCB3EA60035B161 /* Main.storyboard in Resources */,
 			);
@@ -314,6 +324,8 @@
 			files = (
 				B5AE8C101CCB3EA60035B161 /* MainViewController.swift in Sources */,
 				B5AE8C0E1CCB3EA60035B161 /* AppDelegate.swift in Sources */,
+				B50205D11CCBF7710029CAE0 /* CameraViewController.swift in Sources */,
+				B50205D41CCBF7960029CAE0 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

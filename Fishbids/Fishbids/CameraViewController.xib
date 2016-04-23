@@ -15,14 +15,25 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbx-2K-15w">
-                    <rect key="frame" x="177" y="375" width="214" height="124"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="RJi-3f-6bK">
+                    <rect key="frame" x="0.0" y="591" width="414" height="37"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <connections>
+                        <action selector="valueChanged:" destination="i5M-Pr-FkT" eventType="valueChanged" id="Xsg-fr-gZb"/>
+                    </connections>
+                </pageControl>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reference0" translatesAutoresizingMaskIntoConstraints="NO" id="UaD-rm-nwZ">
+                    <rect key="frame" x="0.0" y="36" width="414" height="556"/>
+                </imageView>
             </subviews>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <connections>
+                <outlet property="imageOverlay" destination="UaD-rm-nwZ" id="LGL-yT-LoF"/>
+                <outlet property="pageController" destination="RJi-3f-6bK" id="P8N-nh-Fce"/>
+            </connections>
         </view>
     </objects>
+    <resources>
+        <image name="reference0" width="1818" height="2093"/>
+    </resources>
 </document>
