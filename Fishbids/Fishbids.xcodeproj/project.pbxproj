@@ -14,6 +14,7 @@
 		B549E8D41CCBBE5E002344F9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B549E8D21CCBBE5E002344F9 /* Parse.framework */; };
 		B549E8D71CCBC1E3002344F9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B549E8D61CCBC1E3002344F9 /* SystemConfiguration.framework */; };
 		B5894D241CCC1305007D5433 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5894D231CCC1305007D5433 /* ItemViewController.swift */; };
+		B5894D261CCC3F3A007D5433 /* ItemEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5894D251CCC3F3A007D5433 /* ItemEditViewController.swift */; };
 		B5AE8C0E1CCB3EA60035B161 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE8C0D1CCB3EA60035B161 /* AppDelegate.swift */; };
 		B5AE8C101CCB3EA60035B161 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE8C0F1CCB3EA60035B161 /* MainViewController.swift */; };
 		B5AE8C131CCB3EA60035B161 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AE8C111CCB3EA60035B161 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		B549E8D21CCBBE5E002344F9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B549E8D61CCBC1E3002344F9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B5894D231CCC1305007D5433 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		B5894D251CCC3F3A007D5433 /* ItemEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemEditViewController.swift; sourceTree = "<group>"; };
 		B5AE8C0A1CCB3EA60035B161 /* Fishbids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fishbids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AE8C0D1CCB3EA60035B161 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5AE8C0F1CCB3EA60035B161 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				B5AE8C0F1CCB3EA60035B161 /* MainViewController.swift */,
 				B5AE8C111CCB3EA60035B161 /* Main.storyboard */,
 				B5894D231CCC1305007D5433 /* ItemViewController.swift */,
+				B5894D251CCC3F3A007D5433 /* ItemEditViewController.swift */,
 				B50205CF1CCBF7710029CAE0 /* CameraViewController.swift */,
 				B50205D01CCBF7710029CAE0 /* CameraViewController.xib */,
 				B50205D31CCBF7960029CAE0 /* CameraView.swift */,
@@ -328,6 +331,7 @@
 				B5AE8C101CCB3EA60035B161 /* MainViewController.swift in Sources */,
 				B5AE8C0E1CCB3EA60035B161 /* AppDelegate.swift in Sources */,
 				B5894D241CCC1305007D5433 /* ItemViewController.swift in Sources */,
+				B5894D261CCC3F3A007D5433 /* ItemEditViewController.swift in Sources */,
 				B50205D11CCBF7710029CAE0 /* CameraViewController.swift in Sources */,
 				B50205D41CCBF7960029CAE0 /* CameraView.swift in Sources */,
 			);
