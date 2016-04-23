@@ -117,6 +117,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cameraView : CameraView = cameraViewController.view as! CameraView
         cameraView.frame =  self.imagePicker.view.frame
         
+        imagePicker.modalPresentationStyle = .FullScreen
         presentViewController(imagePicker, animated: true,
             completion: {
                 self.imagePicker.cameraOverlayView = cameraView
@@ -124,9 +125,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         )
     }
     
-    func showProductView() {
+    func showItemView() {
         /*
-        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductAddViewController") as! ProductAddViewController
+        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("ItemViewController") as! ItemViewController
         
         viewController.image = imageTemp
         viewController.masterView = self
@@ -135,18 +136,23 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
  */
     }
     
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        print("done")
+        
+    }
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
         
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         
         // load and resized image
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
-        let resizeRate:CGFloat = 5.0
-        
-        let newSize = CGSizeMake(image.size.width / resizeRate, image.size.height / resizeRate)
         
         /*
+         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+         
+         let resizeRate:CGFloat = 5.0
+         
+         let newSize = CGSizeMake(image.size.width / resizeRate, image.size.height / resizeRate)
         image.resize(newSize, completionHandler: { [weak self](resizedImage, data) -> () in
             let image = resizedImage
             self?.imageTemp = image
@@ -157,7 +163,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func imagePickerControllerDidCancel(_picker: UIImagePickerController) {
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+        imagePicker.dismissViewControllerAnimated(true, completion:  nil)
     }
     
     func refresh() {

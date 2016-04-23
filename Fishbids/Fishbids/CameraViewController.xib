@@ -17,7 +17,7 @@
             <subviews>
                 <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="RJi-3f-6bK">
                     <rect key="frame" x="0.0" y="591" width="414" height="37"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
                         <action selector="valueChanged:" destination="i5M-Pr-FkT" eventType="valueChanged" id="Xsg-fr-gZb"/>
                     </connections>

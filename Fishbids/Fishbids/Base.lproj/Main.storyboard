@@ -54,6 +54,9 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.42745098039215684" green="0.61960784313725492" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="5YF-yJ-ngX" kind="presentation" id="n4f-yA-wmf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -127,6 +130,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="326" y="289"/>
+        </scene>
+        <!--Item View Controller-->
+        <scene sceneID="3Wn-E1-Um7">
+            <objects>
+                <viewController id="5YF-yJ-ngX" customClass="ItemViewController" customModule="Fishbids" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WxF-HG-GMb"/>
+                        <viewControllerLayoutGuide type="bottom" id="oye-oI-586"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xRj-5i-vd7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU1-qZ-GeY">
+                                <rect key="frame" x="188" y="686" width="39" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="close:" destination="5YF-yJ-ngX" eventType="touchUpInside" id="CbI-HD-XSp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60252672699999998" green="0.75709966650000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E61-lK-tBD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005" y="289"/>
         </scene>
     </scenes>
     <resources>
