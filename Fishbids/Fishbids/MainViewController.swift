@@ -18,6 +18,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let imagePicker = UIImagePickerController()
 
     struct Product {
+        var oid : String
         var name: String
         var price: String
         var date: String
@@ -48,7 +49,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             (result: [PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 for item in result! {
-                    self.products.append(Product(name: item["name"] as! String, price: item["price"] as! String, date: item["price"] as! String, sold: false))
+                    self.products.append(Product(oid: item.objectId!, name: item["name"] as! String, price: item["price"] as! String, date: item["price"] as! String, sold: false))
                 }
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     self.refresh()
@@ -91,6 +92,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCellWithIdentifier("productCell") as UITableViewCell?
         
         let idx = indexPath.item
+        
         
         let view = cell!.contentView.subviews[1] as UIView
         
