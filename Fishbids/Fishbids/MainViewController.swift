@@ -113,7 +113,15 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         imagePicker.delegate = self
         imagePicker.sourceType = .Camera
         
-        presentViewController(imagePicker, animated: true, completion: nil)
+        let cameraViewController = CameraViewController(nibName: "CameraViewController", bundle: nil)
+        let cameraView : CameraView = cameraViewController.view as! CameraView
+        cameraView.frame =  self.imagePicker.view.frame
+        
+        presentViewController(imagePicker, animated: true,
+            completion: {
+                self.imagePicker.cameraOverlayView = cameraView
+            }
+        )
     }
     
     func showProductView() {
