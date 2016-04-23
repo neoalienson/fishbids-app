@@ -1,0 +1,48 @@
+{ "results": [
+	{
+        "createdAt": "2016-04-23T15:17:24.649Z",
+        "name": "5x 50cm 10kg Salmon",
+        "objectId": "Ld6SfU65lA",
+        "price": "$155 HKD",
+        "sold": false,
+        "updatedAt": "2016-04-23T15:17:34.301Z"
+    },
+	{
+        "createdAt": "2016-04-23T15:18:53.803Z",
+        "name": "2 20cm Squid",
+        "objectId": "cQixGrpx95",
+        "price": "$60 HKD",
+        "sold": false,
+        "updatedAt": "2016-04-23T15:19:43.644Z"
+    },
+	{
+        "ACL": {
+            "*": {
+                "read": true,
+                "write": true
+            }
+        },
+        "createdAt": "2016-04-23T14:41:02.651Z",
+        "name": "5x 50cm Grouper",
+        "objectId": "i32z3n4Rrn",
+        "price": "$130 HKD",
+        "sold": false,
+        "updatedAt": "2016-04-23T15:20:15.334Z"
+    },
+	{
+        "createdAt": "2016-04-23T15:17:48.985Z",
+        "name": "1x 5kg Lobster",
+        "objectId": "jX7o4cXfQH",
+        "price": "$155 HKD",
+        "sold": false,
+        "updatedAt": "2016-04-23T15:18:03.224Z"
+    },
+	{
+        "createdAt": "2016-04-23T15:18:17.577Z",
+        "name": "12kg Shrimp",
+        "objectId": "ofUss40vIi",
+        "price": "$50 HKD",
+        "sold": false,
+        "updatedAt": "2016-04-23T15:18:43.172Z"
+    }
+] }
