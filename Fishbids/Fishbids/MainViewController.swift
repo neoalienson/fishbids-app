@@ -11,6 +11,7 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    @IBOutlet weak var labelTicker: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageViewPhoto : UIImageView!
     @IBOutlet weak var buttonSell : UIButton!
@@ -25,21 +26,22 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
    
     var products = [Product]()
     
-    override func viewDidLoad() {
-        /*
-        products.append(Product(name : "5x 50cm Grouper", price : "$130 HKD", date : "April 23, 2016", sold : false))
-        products.append(Product(name : "5x 50cm 10kg Salmon", price : "$155 HKD", date : "April 23, 2016", sold : false))
-        products.append(Product(name : "1x 5kg Lobster", price : "$155 HKD", date : "April 23, 2016", sold : false))
-        products.append(Product(name : "12kg Shrimp", price : "$50 HKD", date : "April 22, 2016", sold : false))
-        products.append(Product(name : "2 20cm Squid", price : "$60 HKD", date : "April 22, 2016", sold : false))
- 
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            print("Object has been saved.")
+    let tickerMessage = "Grouper @Aberdeen 30/kg @Sai Kung 40/kg Salmon @Aberdeen 20ea @Sai Kung 15ea Grouper @Aberdeen 30/kg @Sai Kung 40/kg Salmon @Aberdeen 20ea @Sai Kung 15ea "
+    var tickerMessageIdx = 0
+    
+    func updateTicker() {
+        tickerMessageIdx += 1
+        if (tickerMessageIdx >= tickerMessage.characters.count / 2) {
+            tickerMessageIdx = 0
         }
-         */
-        
+        labelTicker.text = tickerMessage.substringFromIndex(tickerMessage.startIndex.advancedBy(tickerMessageIdx))
+    }
+    
+    func setupTicker() {
+        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(updateTicker), userInfo: nil, repeats: true)
+    }
+    
+    func fetchStock() {
         let query = PFQuery.init(className: "item")
         query.findObjectsInBackgroundWithBlock {
             (result: [PFObject]?, error: NSError?) -> Void in
@@ -54,19 +56,29 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 print(error)
             }
         }
-        // If no objects are loaded in memory, we look to the cache first to fill the table
-        // and then subsequently do a query against the network.
-        //
-        // If there is no network connection, we will hit the cache first
-        
-        super.viewDidLoad()
-        
-        // round corner buttons
+    }
+    
+    func setupRoundCornerButtons() {
         imageViewPhoto.layer.cornerRadius = imageViewPhoto.frame.size.height / 2
         imageViewPhoto.clipsToBounds = true
         
         buttonSell.layer.cornerRadius = buttonSell.frame.size.height / 10
         buttonSell.clipsToBounds = true
+    }
+    
+    override func viewDidLoad() {
+        setupTicker()
+        fetchStock()
+        /*
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            print("Object has been saved.")
+        }
+         */
+        
+        
+        super.viewDidLoad()
     }
     
     
@@ -78,7 +90,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCellWithIdentifier("productCell") as UITableViewCell?
         
         let idx = indexPath.item
-        print(idx)
         
         let view = cell!.contentView.subviews[1] as UIView
         
