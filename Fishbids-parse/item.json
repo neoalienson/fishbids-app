@@ -1,19 +1,39 @@
 { "results": [
 	{
+        "capture_date": "22 Apr 04:54 HKT",
+        "captured": "Near Lamma Island",
         "createdAt": "2016-04-23T15:17:24.649Z",
+        "date": "22 Apr 2016",
+        "markets": "Aberdeen on 24 Apr morning\nSai Kung on 24 Apr afternoon",
         "name": "5x 50cm 10kg Salmon",
         "objectId": "Ld6SfU65lA",
         "price": "$155 HKD",
         "sold": false,
-        "updatedAt": "2016-04-23T15:17:34.301Z"
+        "updatedAt": "2016-04-23T23:20:17.021Z"
     },
 	{
+        "capture_date": "24 Apr 05:02 HKT",
+        "captured": "Near Lamma Island",
+        "createdAt": "2016-04-23T22:32:40.297Z",
+        "date": "24 Apr 2016",
+        "markets": "Aberdeen on 24 Apr morning\nSai Kung on 24 Apr afternoon",
+        "name": "1X 20cm Big Eye",
+        "objectId": "Wu9tt2A3qT",
+        "price": "$20 HKD",
+        "sold": false,
+        "updatedAt": "2016-04-23T23:20:09.938Z"
+    },
+	{
+        "capture_date": "23 Apr 04:02 HKT",
+        "captured": "Near Lamma Island",
         "createdAt": "2016-04-23T15:18:53.803Z",
-        "name": "2 20cm Squid",
+        "date": "23 Apr 2016",
+        "markets": "Aberdeen on 24 Apr morning\nSai Kung on 24 Apr afternoon",
+        "name": "2X 20cm Squid",
         "objectId": "cQixGrpx95",
         "price": "$60 HKD",
         "sold": false,
-        "updatedAt": "2016-04-23T15:19:43.644Z"
+        "updatedAt": "2016-04-23T23:20:12.383Z"
     },
 	{
         "ACL": {
@@ -22,27 +42,39 @@
                 "write": true
             }
         },
+        "capture_date": "22 Apr 04:56 HKT",
+        "captured": "Near Lamma Island",
         "createdAt": "2016-04-23T14:41:02.651Z",
+        "date": "22 Apr 2016",
+        "markets": "Aberdeen on 24 Apr morning\nSai Kung on 24 Apr afternoon",
         "name": "5x 50cm Grouper",
         "objectId": "i32z3n4Rrn",
         "price": "$130 HKD",
         "sold": false,
-        "updatedAt": "2016-04-23T15:20:15.334Z"
+        "updatedAt": "2016-04-23T23:20:18.319Z"
     },
 	{
+        "capture_date": "24 Apr 03:54 HKT",
+        "captured": "Near Lamma Island",
         "createdAt": "2016-04-23T15:17:48.985Z",
+        "date": "23 Apr 2016",
+        "markets": "Aberdeen on 24 Apr morning\nSai Kung on 24 Apr afternoon",
         "name": "1x 5kg Lobster",
         "objectId": "jX7o4cXfQH",
         "price": "$155 HKD",
         "sold": false,
-        "updatedAt": "2016-04-23T15:18:03.224Z"
+        "updatedAt": "2016-04-23T23:20:15.570Z"
     },
 	{
+        "capture_date": "23 Apr 04:01 HKT",
+        "captured": "Near Lamma Island",
         "createdAt": "2016-04-23T15:18:17.577Z",
+        "date": "23 Apr 2016",
+        "markets": "Aberdeen on 24 Apr morning\nSai Kung on 24 Apr afternoon",
         "name": "12kg Shrimp",
         "objectId": "ofUss40vIi",
         "price": "$50 HKD",
         "sold": false,
-        "updatedAt": "2016-04-23T15:18:43.172Z"
+        "updatedAt": "2016-04-23T23:20:14.151Z"
     }
 ] }
