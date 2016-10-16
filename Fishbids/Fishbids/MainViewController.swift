@@ -116,7 +116,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell!
     }
     
-    @IBAction func buttonStart(sender: AnyObject) {
+    @IBAction func buttonStart(_ sender: AnyObject) {
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         

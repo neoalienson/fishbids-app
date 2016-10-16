@@ -18,7 +18,7 @@ class ItemViewController: UIViewController {
     
     var product : MainViewController.Product!
     
-    @IBAction func close(sender: AnyObject) {
+    @IBAction func close(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
     
