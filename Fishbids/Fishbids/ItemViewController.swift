@@ -19,7 +19,7 @@ class ItemViewController: UIViewController {
     var product : MainViewController.Product!
     
     @IBAction func close(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

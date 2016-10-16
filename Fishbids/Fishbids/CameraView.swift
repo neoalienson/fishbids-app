@@ -11,13 +11,13 @@ import UIKit
 class CameraView: UIView {
     @IBAction func valueChanged(sender: AnyObject) {
         if (pageController.currentPage == 1) {
-            imageOverlay.image = UIImage.init(imageLiteral: "reference1")
+            imageOverlay.image = UIImage.init(imageLiteralResourceName: "reference1")
         } else if (pageController.currentPage == 2) {
-            imageOverlay.image = UIImage.init(imageLiteral: "reference2")
+            imageOverlay.image = UIImage.init(imageLiteralResourceName: "reference2")
         } else if (pageController.currentPage == 3) {
-            imageOverlay.image = UIImage.init(imageLiteral: "reference3")
+            imageOverlay.image = UIImage.init(imageLiteralResourceName: "reference3")
         } else {
-            imageOverlay.image = UIImage.init(imageLiteral: "reference0")
+            imageOverlay.image = UIImage.init(imageLiteralResourceName: "reference0")
         }
     }
     

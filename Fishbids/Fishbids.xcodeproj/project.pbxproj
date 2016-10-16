@@ -26,7 +26,6 @@
 		B5B071A71CCBBB9900609F4E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B071A61CCBBB9900609F4E /* CoreGraphics.framework */; };
 		B5B071A91CCBBBA000609F4E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B071A81CCBBBA000609F4E /* QuartzCore.framework */; };
 		B5B071AB1CCBBBA900609F4E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B071AA1CCBBBA900609F4E /* Security.framework */; };
-		B5B071AD1CCBBBAF00609F4E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B071AC1CCBBBAF00609F4E /* StoreKit.framework */; };
 		B5B071AF1CCBBBB600609F4E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B071AE1CCBBBB600609F4E /* libz.tbd */; };
 		B5B071B11CCBBBBE00609F4E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B071B01CCBBBBE00609F4E /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
@@ -66,7 +65,6 @@
 				B549E8D71CCBC1E3002344F9 /* SystemConfiguration.framework in Frameworks */,
 				B5B071B11CCBBBBE00609F4E /* libsqlite3.tbd in Frameworks */,
 				B5B071AF1CCBBBB600609F4E /* libz.tbd in Frameworks */,
-				B5B071AD1CCBBBAF00609F4E /* StoreKit.framework in Frameworks */,
 				B5B071AB1CCBBBA900609F4E /* Security.framework in Frameworks */,
 				B5B071A91CCBBBA000609F4E /* QuartzCore.framework in Frameworks */,
 				B549E8D31CCBBE5E002344F9 /* Bolts.framework in Frameworks */,

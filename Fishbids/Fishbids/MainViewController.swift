@@ -38,23 +38,24 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if (tickerMessageIdx >= tickerMessage.characters.count / 2) {
             tickerMessageIdx = 0
         }
-        labelTicker.text = tickerMessage.substringFromIndex(tickerMessage.startIndex.advancedBy(tickerMessageIdx))
+        labelTicker.text = tickerMessage.substring(from: tickerMessage.index(tickerMessage.startIndex, offsetBy: tickerMessageIdx))
     }
     
     func setupTicker() {
-        NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: #selector(updateTicker), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updateTicker), userInfo: nil, repeats: true)
     }
     
     func fetchStock() {
         let query = PFQuery.init(className: "item")
-        query.orderByDescending("date")
-        query.findObjectsInBackgroundWithBlock {
-            (result: [PFObject]?, error: NSError?) -> Void in
+        query.order(byDescending: "date")
+
+        query.findObjectsInBackground {
+            (result: [PFObject]?, error: Error?) -> Void in
             if error == nil {
                 for item in result! {
                     self.products.append(Product(oid: item.objectId!, name: item["name"] as! String, price: item["price"] as! String, date: item["price"] as! String, sold: false, captured: item["captured"] as! String, markets: item["markets"] as! String, capture_date: item["capture_date"] as! String))
                 }
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
                     self.refresh()
                 })
             } else {
@@ -87,12 +88,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("productCell") as UITableViewCell?
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell") as UITableViewCell?
         
         let idx = indexPath.item
         
@@ -117,14 +118,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func buttonStart(sender: AnyObject) {
         imagePicker.delegate = self
-        imagePicker.sourceType = .Camera
+        imagePicker.sourceType = .camera
         
         let cameraViewController = CameraViewController(nibName: "CameraViewController", bundle: nil)
         let cameraView : CameraView = cameraViewController.view as! CameraView
         cameraView.frame =  self.imagePicker.view.frame
         
-        imagePicker.modalPresentationStyle = .FullScreen
-        presentViewController(imagePicker, animated: true,
+        imagePicker.modalPresentationStyle = .fullScreen
+        present(imagePicker, animated: true,
             completion: {
                 self.imagePicker.cameraOverlayView = cameraView
             }
@@ -147,9 +148,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
-        
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        imagePicker.dismiss(animated: true, completion: nil)
         
         // load and resized image
         
@@ -168,15 +168,15 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
  */
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let idx = self.tableView.indexPathForSelectedRow
-        let itemViewController = segue.destinationViewController as! ItemViewController
+        let itemViewController = segue.destination as! ItemViewController
         let item = self.products[idx!.row]
         itemViewController.product = item
     }
         
-    func imagePickerControllerDidCancel(_picker: UIImagePickerController) {
-        imagePicker.dismissViewControllerAnimated(true, completion:  nil)
+    func imagePickerControllerDidCancel(_ _picker: UIImagePickerController) {
+        imagePicker.dismiss(animated: true, completion:  nil)
     }
     
     func refresh() {
