@@ -198,11 +198,13 @@
 					};
 					B5AE8C571CCB89E10035B161 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 37J588435Y;
 						LastSwiftMigration = 0800;
 						TestTargetID = B5AE8C431CCB89E10035B161;
 					};
 					B5AE8C621CCB89E10035B161 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 37J588435Y;
 						LastSwiftMigration = 0800;
 						TestTargetID = B5AE8C431CCB89E10035B161;
 					};
@@ -431,6 +433,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 37J588435Y;
 				INFOPLIST_FILE = FishMasterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fishbids.FishMasterTests;
@@ -444,6 +448,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 37J588435Y;
 				INFOPLIST_FILE = FishMasterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fishbids.FishMasterTests;
@@ -456,6 +462,8 @@
 		B5AE8C731CCB89E10035B161 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 37J588435Y;
 				INFOPLIST_FILE = FishMasterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fishbids.FishMasterUITests;
@@ -468,6 +476,8 @@
 		B5AE8C741CCB89E10035B161 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 37J588435Y;
 				INFOPLIST_FILE = FishMasterUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fishbids.FishMasterUITests;
